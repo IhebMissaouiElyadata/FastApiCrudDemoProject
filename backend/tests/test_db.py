@@ -44,7 +44,6 @@ def test_connection():
         print(f"Connection failed: {e}")
         assert False
 
-
 # Test the connection
 def test_postgresql_connection():
     test_connection()

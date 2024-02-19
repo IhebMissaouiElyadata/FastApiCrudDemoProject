@@ -39,7 +39,7 @@ volumes:
   postgres_data:
     driver: local
 
-#    image: mysql:5.7
+#    image: mysql:5.7::
 #    environment:
 #      MYSQL_ROOT_PASSWORD: admin
 #      MYSQL_ROOT_USER: admin
