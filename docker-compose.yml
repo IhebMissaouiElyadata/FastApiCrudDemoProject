@@ -7,12 +7,42 @@ services:
       - "5000:5000"
     depends_on:
       - db
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=mydatabase
+      - DB_USER=user
+      - DB_PASSWORD=user
+
+
 
   db:
-    image: mysql:5.7
+    image: postgres:latest
+    restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: admin
-      MYSQL_ROOT_USER: admin
-      MYSQL_DATABASE: LLMBD
-      MYSQL_USER: user
-      MYSQL_PASSWORD: user
+      POSTGRES_DB: mydatabase
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: user
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: iheb.missaoui@elyadata.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5001:80"
+    depends_on:
+      - db
+volumes:
+  postgres_data:
+    driver: local
+
+#    image: mysql:5.7
+#    environment:
+#      MYSQL_ROOT_PASSWORD: admin
+#      MYSQL_ROOT_USER: admin
+#      MYSQL_DATABASE: LLMBD
+#      MYSQL_USER: user
+#      MYSQL_PASSWORD: user

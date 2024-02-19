@@ -19,7 +19,8 @@ COPY ./source/ source/
 COPY ./main.py main.py
 COPY ./requirements.txt requirements.txt
 RUN pip install -r requirements.txt
-CMD python main.py
+
+CMD ["sh", "-c", "pytest test.py || true && python main.py"]
 #CMD ["uvicorn", "main:app", "--reload"]
 
 
