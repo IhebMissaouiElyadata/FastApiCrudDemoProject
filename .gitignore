@@ -1,3 +1,7 @@
+# Ignore editor directories and files
+.idea/
+.vscode/
+
 # Ignore Python bytecode files
 __pycache__/
 
@@ -16,9 +20,7 @@ venv/
 env/
 ENV/
 
-# Ignore editor directories and files
-.idea/
-.vscode/
+
 
 
 
