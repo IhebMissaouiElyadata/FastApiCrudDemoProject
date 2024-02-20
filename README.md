@@ -1,5 +1,6 @@
 # FastApiCrudDemoProject
-This is my First FastApiDockerDemo
-# Some changes to commit to dev branch 
+This is my First Fast API application : 
+I will create a simple CRUD of prompts and histories using fast API to build END POINTS and a database PostgreSQL 
 
-# SOme changes to commit to feature_backend_db_done : this branch is reponsible for completing the crud api and interrogating the  db 
+Note : 
+i changed the service of db from mysql to PostgreSQL 

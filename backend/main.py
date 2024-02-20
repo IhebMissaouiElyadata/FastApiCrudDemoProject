@@ -18,5 +18,6 @@ app.include_router(history_router, prefix="/history")
 
 app.include_router(prompt_router, prefix="/prompt")
 
-if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=5000)
+#another method to run uvicorn server
+# if __name__ == "__main__":
+#     uvicorn.run(app, host="0.0.0.0", port=5000)

@@ -1,4 +1,6 @@
 fastapi
 uvicorn
+pytest
+psycopg2-binary
 #mysql-connector-python
 #pytest to test connection with db ( the ip of container of db is not localhost because the default network is bridge)
