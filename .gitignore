@@ -1,0 +1,89 @@
+# Ignore Python bytecode files
+__pycache__/
+
+# Ignore environment-specific files
+.env
+.env.local
+.env.*.local
+
+# Ignore logs
+*.log
+
+
+# Ignore dependency directories
+venv/
+.venv/
+env/
+ENV/
+
+# Ignore editor directories and files
+.idea/
+.vscode/
+
+
+
+# Ignore Python bytecode files
+backend/__pycache__/
+
+# Ignore environment-specific files for the backend
+backend/.env
+backend/.env.local
+backend/.env.*.local
+
+# Ignore logs for the backend
+backend/*.log
+
+
+
+# Ignore dependency directories for the backend
+backend/venv/
+backend/.venv/
+backend/env/
+backend/ENV/
+
+# Ignore editor directories and files for the backend
+backend/.idea/
+backend/.vscode/
+
+# Ignore Python package directories for the backend
+backend/*.egg-info/
+backend/dist/
+backend/build/
+
+# Ignore local development files for the backend
+#backend/.docker/
+#backend/.docker-compose.yml
+
+
+# React.js specific
+
+# Dependency directories for the frontend
+frontend/node_modules/
+frontend/bower_components/
+
+# Environment files for the frontend
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Log files for the frontend
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# Editor directories for the frontend
+frontend/.vscode/
+frontend/.idea/
+
+# macOS files for the frontend
+frontend/.DS_Store
+
+# Build files for the frontend
+frontend/build
+frontend/dist
+frontend/.next
+
+# Cache directories for the frontend
+frontend/.cache/
