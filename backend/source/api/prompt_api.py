@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-router = APIRouter()
+router = APIRouter(prefix="/prompt")
 
 
 @router.post("/prompt/{task_number}")

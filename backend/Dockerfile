@@ -19,11 +19,12 @@ COPY ./source/ source/
 COPY ./main.py main.py
 COPY ./requirements.txt requirements.txt
 COPY ./tests/ tests/
+COPY ./config/ config/
 
+COPY ./exist_tables_or_create.py exist_tables_or_create.py
 RUN pip install -r requirements.txt
-
 #CMD ["sh", "-c", "pytest tests/test_db.py || true && python main.py"]
-CMD ["uvicorn", "main:app","--host", "0.0.0.0", "--port", "5000"]
+CMD ["sh", "-c", "python exist_tables_or_create.py && uvicorn main:app --host 0.0.0.0 --port 5000"]
 #CMD ["uvicorn", "main:app", "--reload"]
 
 

@@ -1,15 +1,16 @@
-import uvicorn
 from fastapi import FastAPI
 
-from source.history_api import router as history_router
-from source.prompt_api import router as prompt_router
+from source.api.history_api import router as history_router
+from source.api.prompt_api import router as prompt_router
+from config.settings import Appconfig
 
-app = FastAPI()
+config = Appconfig()
+app = FastAPI(title=config.app_name)
 
 
 # Mount router sapp
 @app.get("/")
-async def Home():
+async def home():
     return {"Model ": "TasksLLMMOdel",
             "version": "1.0"}
 
